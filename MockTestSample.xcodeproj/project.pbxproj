@@ -20,7 +20,9 @@
 		3439FA7F18C2F9480007C543 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3439FA5E18C2F9480007C543 /* Foundation.framework */; };
 		3439FA8018C2F9480007C543 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3439FA6218C2F9480007C543 /* UIKit.framework */; };
 		3439FA8818C2F9480007C543 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3439FA8618C2F9480007C543 /* InfoPlist.strings */; };
-		3439FA8A18C2F9480007C543 /* MockTestSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3439FA8918C2F9480007C543 /* MockTestSampleTests.m */; };
+		3439FA9618C2FC040007C543 /* MTSCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 3439FA9518C2FC040007C543 /* MTSCompany.m */; };
+		3439FA9918C2FC0E0007C543 /* MTSEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 3439FA9818C2FC0E0007C543 /* MTSEmployee.m */; };
+		3439FA9C18C3037C0007C543 /* MTSCompanyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3439FA9B18C3037C0007C543 /* MTSCompanyTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,11 @@
 		3439FA7D18C2F9480007C543 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3439FA8518C2F9480007C543 /* MockTestSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MockTestSampleTests-Info.plist"; sourceTree = "<group>"; };
 		3439FA8718C2F9480007C543 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3439FA8918C2F9480007C543 /* MockTestSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockTestSampleTests.m; sourceTree = "<group>"; };
+		3439FA9418C2FC040007C543 /* MTSCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSCompany.h; sourceTree = "<group>"; };
+		3439FA9518C2FC040007C543 /* MTSCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSCompany.m; sourceTree = "<group>"; };
+		3439FA9718C2FC0E0007C543 /* MTSEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSEmployee.h; sourceTree = "<group>"; };
+		3439FA9818C2FC0E0007C543 /* MTSEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSEmployee.m; sourceTree = "<group>"; };
+		3439FA9B18C3037C0007C543 /* MTSCompanyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSCompanyTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 		3439FA6418C2F9480007C543 /* MockTestSample */ = {
 			isa = PBXGroup;
 			children = (
+				3439FA9318C2FBCC0007C543 /* Model */,
 				3439FA6D18C2F9480007C543 /* MTSAppDelegate.h */,
 				3439FA6E18C2F9480007C543 /* MTSAppDelegate.m */,
 				3439FA7018C2F9480007C543 /* Main.storyboard */,
@@ -137,7 +144,7 @@
 		3439FA8318C2F9480007C543 /* MockTestSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				3439FA8918C2F9480007C543 /* MockTestSampleTests.m */,
+				3439FA9A18C303650007C543 /* Model */,
 				3439FA8418C2F9480007C543 /* Supporting Files */,
 			);
 			path = MockTestSampleTests;
@@ -150,6 +157,25 @@
 				3439FA8618C2F9480007C543 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3439FA9318C2FBCC0007C543 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3439FA9418C2FC040007C543 /* MTSCompany.h */,
+				3439FA9518C2FC040007C543 /* MTSCompany.m */,
+				3439FA9718C2FC0E0007C543 /* MTSEmployee.h */,
+				3439FA9818C2FC0E0007C543 /* MTSEmployee.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3439FA9A18C303650007C543 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3439FA9B18C3037C0007C543 /* MTSCompanyTest.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,8 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3439FA9918C2FC0E0007C543 /* MTSEmployee.m in Sources */,
 				3439FA7518C2F9480007C543 /* MTSViewController.m in Sources */,
 				3439FA6B18C2F9480007C543 /* main.m in Sources */,
+				3439FA9618C2FC040007C543 /* MTSCompany.m in Sources */,
 				3439FA6F18C2F9480007C543 /* MTSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3439FA8A18C2F9480007C543 /* MockTestSampleTests.m in Sources */,
+				3439FA9C18C3037C0007C543 /* MTSCompanyTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
